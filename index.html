@@ -7,36 +7,52 @@
     body { font-family: Arial, sans-serif; max-width: 800px; margin: auto; padding: 20px; line-height: 1.6; }
     header, footer { text-align: center; background-color: #f4f4f4; padding: 10px; }
     h1, h2 { color: #333; }
+    nav a { margin: 0 10px; color: #333; text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    section { margin-bottom: 40px; }
   </style>
 </head>
 <body>
   <header>
     <h1>Heungseo's Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
   <main>
-    <section>
+    <section id="about">
       <h2>About Me</h2>
-      <p>This is a placeholder for your personal introduction. Describe your background, education, and interests here.</p>
+      <p>Hello! I'm Heungseo, a computer science student based in Yangju, South Korea. I enjoy building web applications and exploring new technologies. My interests include web development, data analytics, and open-source projects.</p>
+      <p>I am currently studying computer science and have worked on several projects ranging from simple portfolio sites to functional applications using modern frameworks.</p>
     </section>
-    <section>
+    <section id="projects">
       <h2>Projects</h2>
-      <p>List your notable projects here, including details about what you built, the technologies used, and any links to the source code.</p>
+      <h3>Personal Portfolio Website</h3>
+      <p>This website is a personal project to showcase my work, skills, and experiences. Built using HTML, CSS, and a bit of JavaScript, it is hosted on GitHub Pages.</p>
+      <h3>Todo List App</h3>
+      <p>A responsive web application that allows users to manage tasks. Implemented with React for the frontend and Node.js/Express for a simple backend API.</p>
+      <h3>Weather Dashboard</h3>
+      <p>An application that fetches real-time weather data using a public API and displays forecasts. Built with JavaScript and styled with Bootstrap.</p>
     </section>
-    <section>
+    <section id="skills">
       <h2>Skills</h2>
       <ul>
-        <li>Programming languages: </li>
-        <li>Frameworks and libraries: </li>
-        <li>Tools and technologies: </li>
+        <li>Programming languages: Python, Java, JavaScript, HTML, CSS</li>
+        <li>Frameworks and libraries: React, Express.js, Bootstrap</li>
+        <li>Tools and technologies: Git, GitHub, VS Code, Linux</li>
       </ul>
     </section>
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
-      <p>You can reach me at: <a href="mailto:email@example.com">email@example.com</a></p>
+      <p>Feel free to reach out via email: <a href="mailto:heungseo@example.com">heungseo@example.com</a></p>
+      <p>You can also find me on GitHub: <a href="https://github.com/heungseo">github.com/heungseo</a></p>
     </section>
   </main>
   <footer>
-    <p>© 2025 Heungseo. All rights reserved.</p>
+    <p>&copy; 2025 Heungseo. All rights reserved.</p>
   </footer>
 </body>
 </html>
