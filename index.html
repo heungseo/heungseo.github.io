@@ -1,229 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Heungseo's Portfolio</title>
-  <style>
- /* === 전체적인 입체 배경 설정 === */
-body {
-    font-family: 'Noto Sans KR', sans-serif;
-    /* 은은한 대각선 그라데이션 배경으로 깊이감 부여 */
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    color: #444;
-    line-height: 1.7;
-    margin: 0;
-    padding: 40px 20px; /* 전체적인 여백을 좀 더 줌 */
-    min-height: 100vh; /* 화면 전체 높이를 채움 */
-    box-sizing: border-box; /* 패딩이 너비에 포함되도록 함 */
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홍서박의 포트폴리오</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* === 전체적인 입체 배경 설정 === */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 은은한 대각선 그라데이션 배경 */
+            color: #444;
+            line-height: 1.7;
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
 
-/* 메인 컨테이너 (화면 중앙의 흰색 박스) */
-body > * {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-}
+        /* 메인 컨테이너 (화면 중앙의 흰색 박스) */
+        body > * {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-/* === 헤더(머리말) 디자인 === */
-header {
-    /* 짙은 남색 그라데이션으로 고급스러운 느낌 */
-    background: linear-gradient(to right, #2c3e50, #4ca1af);
-    color: #ffffff;
-    padding: 50px 30px;
-    text-align: center;
-    border-radius: 20px 20px 0 0; /* 위쪽만 둥글게 */
-    /* 헤더 자체에 강한 입체 그림자 */
-    box-shadow: 0 10px 30px rgba(44, 62, 80, 0.4);
-    position: relative; /* 겹침 효과를 위해 */
-    z-index: 10; /* 메인 콘텐츠보다 위에 오도록 */
-}
+        /* === 헤더(머리말) 디자인 === */
+        header {
+            background: linear-gradient(to right, #2c3e50, #4ca1af); /* 짙은 남색 그라데이션 */
+            color: #ffffff;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+            box-shadow: 0 10px 30px rgba(44, 62, 80, 0.4); /* 강한 입체 그림자 */
+            position: relative;
+            z-index: 10;
+        }
 
-h1 {
-    margin: 0 0 30px 0;
-    font-size: 2.8rem;
-    font-weight: 800;
-    /* 글씨에 미세한 그림자를 주어 튀어나와 보이게 함 */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    letter-spacing: -1px; /* 자간을 좁혀 단단한 느낌 */
-}
+        h1 {
+            margin: 0 0 30px 0;
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 글씨 그림자 */
+            letter-spacing: -1px;
+        }
 
-/* === 입체적인 내비게이션 메뉴 === */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        /* === 입체적인 내비게이션 메뉴 === */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 12px 25px;
-    border-radius: 30px; /* 캡슐 모양 */
-    /* 반투명한 흰색 배경으로 유리 같은 느낌 */
-    background-color: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px); /* 배경 블러 효과 (지원 브라우저만) */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* 테두리 추가 */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 버튼 그림자 */
-    transition: all 0.3s ease; /* 부드러운 움직임 */
-}
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.15); /* 반투명 배경 */
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
 
-nav a:hover {
-    background-color: #ffffff;
-    color: #2c3e50;
-    /* 마우스 올리면 위로 살짝 떠오르는 효과 */
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* 그림자가 진해짐 */
-}
+        nav a:hover {
+            background-color: #ffffff;
+            color: #2c3e50;
+            transform: translateY(-3px); /* 마우스 올리면 떠오름 */
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
 
-/* === 메인 콘텐츠(본문) 입체 박스 === */
-main {
-    background-color: #ffffff;
-    padding: 60px;
-    border-radius: 0 0 20px 20px; /* 아래쪽만 둥글게 */
-    /* 아주 깊고 부드러운 그림자로 화면에서 붕 뜬 느낌 연출 */
-    box-shadow: 0 30px 60px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.05);
-    margin-top: -20px; /* 헤더와 살짝 겹치게 올려서 입체감 강조 */
-    position: relative;
-    z-index: 5;
-}
+        /* === 메인 콘텐츠(본문) 입체 박스 === */
+        main {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15), 0 10px 20px rgba(0,0,0,0.05); /* 깊은 그림자 */
+            margin-top: -20px; /* 헤더와 겹침 */
+            position: relative;
+            z-index: 5;
+        }
 
-/* 섹션 디자인 */
-section {
-    margin-bottom: 60px;
-    padding: 30px;
-    /* 각 섹션마다 연한 배경과 테두리로 카드 같은 느낌 */
-    background: #f9fbfc;
-    border-radius: 15px;
-    border: 1px solid #eef2f7;
-    /* 섹션 자체에도 미세한 입체감 부여 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-}
+        /* 섹션 디자인 */
+        section {
+            margin-bottom: 60px;
+            padding: 30px;
+            background: #f9fbfc;
+            border-radius: 15px;
+            border: 1px solid #eef2f7;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
 
-/* 섹션 제목(h2) 꾸밈 */
-h2 {
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-}
+        /* 섹션 제목(h2) 꾸밈 */
+        h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+        }
 
-/* 제목 옆에 작은 포인트 아이콘 역할의 선 추가 */
-h2::before {
-    content: '';
-    display: inline-block;
-    width: 8px;
-    height: 30px;
-    background: linear-gradient(to bottom, #3498db, #2c3e50); /* 파란색 그라데이션 */
-    margin-right: 15px;
-    border-radius: 4px;
-}
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 30px;
+            background: linear-gradient(to bottom, #3498db, #2c3e50);
+            margin-right: 15px;
+            border-radius: 4px;
+        }
 
-/* 소제목(h3) */
-h3 {
-    color: #34495e;
-    font-size: 1.4rem;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
+        /* 소제목(h3) */
+        h3 {
+            color: #34495e;
+            font-size: 1.4rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
 
-/* 본문 링크 디자인 */
-a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: 600;
-    /* 링크 밑줄을 그라데이션으로 표현 */
-    background-image: linear-gradient(to right, #3498db 0%, #4ca1af 100%);
-    background-repeat: no-repeat;
-    background-size: 100% 3px; /* 밑줄 두께 */
-    background-position: 0 100%; /* 밑줄 위치 */
-    transition: all 0.3s ease;
-    padding-bottom: 2px;
-}
+        /* 본문 링크 디자인 */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            background-image: linear-gradient(to right, #3498db 0%, #4ca1af 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 100%;
+            transition: all 0.3s ease;
+            padding-bottom: 2px;
+        }
 
-a:hover {
-    /* 마우스 올리면 밑줄이 두꺼워지며 하이라이트 효과 */
-    background-size: 100% 100%; /* 배경을 꽉 채움 */
-    color: #fff; /* 글자색을 흰색으로 변경 */
-    border-radius: 4px; /* 모서리 둥글게 */
-    padding: 2px 5px; /* 안쪽 여백 추가 */
-}
+        a:hover {
+            background-size: 100% 100%;
+            color: #fff;
+            border-radius: 4px;
+            padding: 2px 5px;
+        }
 
-/* 목록 디자인 */
-ul li {
-    margin-bottom: 12px;
-    padding-left: 20px; /* 기본 불릿 대신 커스텀 */
-    position: relative;
-    list-style: none; /* 기본 불릿 제거 */
-}
+        /* 목록 디자인 */
+        ul {
+            padding-left: 20px;
+        }
 
-/* 목록 앞의 커스텀 불릿 포인트 */
-ul li::before {
-    content: '✔'; /* 체크 모양 아이콘 */
-    color: #3498db; /* 파란색 */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-weight: bold;
-}
+        ul li {
+            margin-bottom: 12px;
+            padding-left: 20px;
+            position: relative;
+            list-style: none;
+        }
 
-/* 푸터 디자인 */
-footer {
-    background: transparent; /* 배경 투명하게 */
-    color: #666; /* 글자색을 진한 회색으로 */
-    box-shadow: none; /* 그림자 제거 */
-    margin-top: 40px; /* 위쪽 간격 */
-    padding: 20px;
-    font-size: 0.9rem;
-}
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+        ul li::before {
+            content: '✔';
+            color: #3498db;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+        }
+
+        /* 푸터 디자인 */
+        footer {
+            background: transparent;
+            color: #666;
+            box-shadow: none;
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <header>
-   <h1>홍서박의 포트폴리오</h1>
-    <nav>
-      <a href="#about">소개</a>
-      <a href="#projects">프로젝트</a>
-     <a href="#skills">보유 기술</a>
-      <a href="#contact">연락처</a>
-    </nav>
-  </header>
-  <main>
-    <section id="about">
-     <h2>자기소개</h2>
-    <p>안녕하세요! 경기도 양주에 거주하는 인공지능학과 홍서박입니다. 데이터 분석과 웹 개발에 관심이 많으며, 배운 기술을 활용해 새로운 가치를 만드는 것을 좋아합니다.</p>
-    <p>현재 학교에서 컴퓨터 과학을 깊이 있게 공부하고 있으며, 기초부터 실전 프로젝트까지 차근차근 역량을 쌓아가고 있습니다.</p>
-    </section>
-    <section id="projects">
-  <h2>프로젝트 경험</h2>
-
-    <h3>1. 데이터 전처리 및 분석 프로젝트</h3>
-    <p>파이썬(Python)과 판다스(Pandas)를 활용하여 데이터의 결측치를 처리하고, 머신러닝 학습을 위해 데이터를 인코딩 및 스케일링하는 전처리 과정을 직접 수행했습니다.</p>
-
-    <h3>2. 깃허브 포트폴리오 웹사이트</h3>
-    <p>GitHub Pages 기능을 활용하여 별도의 비용 없이 나만의 포트폴리오 사이트를 구축하고 배포했습니다.</p>
-    </section>
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>Programming languages: Python, Java, JavaScript, HTML, CSS</li>
-        <li>Frameworks and libraries: React, Express.js, Bootstrap</li>
-        <li>Tools and technologies: Git, GitHub, VS Code, Linux</li>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Feel free to reach out via email: <a href="mailto:heungseo@example.com">heungseo@example.com</a></p>
-      <p>You can also find me on GitHub: <a href="https://github.com/heungseo">github.com/heungseo</a></p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Heungseo. All rights reserved.</p>
-  </footer>
+    <header>
+        <h1>홍서박의 포트폴리오</h1>
+        <nav>
+            <a href="#about">소개</a>
+            <a href="#projects">프로젝트</a>
+            <a href="#skills">보유 기술</a>
+            <a href="#contact">연락처</a>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>자기소개</h2>
+            <p>안녕하세요! 경기도 양주에 거주하는 인공지능학과 홍서박입니다. 데이터 분석과 웹 개발에 관심이 많으며, 배운 기술을 활용해 새로운 가치를 만드는 것을 좋아합니다.</p>
+            <p>현재 학교에서 컴퓨터 과학을 깊이 있게 공부하고 있으며, 기초부터 실전 프로젝트까지 차근차근 역량을 쌓아가고 있습니다.</p>
+        </section>
+        <section id="projects">
+            <h2>프로젝트 경험</h2>
+            <h3>1. 데이터 전처리 및 분석 프로젝트</h3>
+            <p>파이썬(Python)과 판다스(Pandas)를 활용하여 데이터의 결측치를 처리하고, 머신러닝 학습을 위해 데이터를 인코딩 및 스케일링하는 전처리 과정을 직접 수행했습니다.</p>
+            <h3>2. 깃허브 포트폴리오 웹사이트</h3>
+            <p>GitHub Pages 기능을 활용하여 별도의 비용 없이 나만의 포트폴리오 사이트를 구축하고 배포했습니다.</p>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming languages: Python, Java, JavaScript, HTML, CSS</li>
+                <li>Frameworks and libraries: React, Express.js, Bootstrap</li>
+                <li>Tools and technologies: Git, GitHub, VS Code, Linux</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via email: <a href="mailto:heungseo@example.com">heungseo@example.com</a></p>
+            <p>You can also find me on GitHub: <a href="https://github.com/heungseo">github.com/heungseo</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Heungseo. All rights reserved.</p>
+    </footer>
 </body>
 </html>
